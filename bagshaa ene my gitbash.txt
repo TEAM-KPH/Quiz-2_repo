@@ -1,0 +1,146 @@
+
+Admin@DESKTOP-QLU378L MINGW64 ~
+$ git clone https://github.com/TEAM-KPH/Quiz-2_repo.git
+Cloning into 'Quiz-2_repo'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+
+Admin@DESKTOP-QLU378L MINGW64 ~
+$ ls
+'3D Objects'/
+ AppData/
+'Application Data'@
+'Cisco Packet Tracer 8.2.1'/
+ Contacts/
+ Cookies@
+ Desktop/
+ Documents/
+ Downloads/
+ Favorites/
+ IntelGraphicsProfiles/
+ Links/
+'Local Settings'@
+ Music/
+'My Documents'@
+ NTUSER.DAT
+ NTUSER.DAT{95f0a7ae-2c6c-11ed-94e9-7412b3e07656}.TM.blf
+ NTUSER.DAT{95f0a7ae-2c6c-11ed-94e9-7412b3e07656}.TMContainer00000000000000000001.regtrans-ms
+ NTUSER.DAT{95f0a7ae-2c6c-11ed-94e9-7412b3e07656}.TMContainer00000000000000000002.regtrans-ms
+ NetHood@
+ Pictures/
+ PrintHood@
+ Quiz-2_repo/
+ Recent@
+'Saved Games'/
+ Searches/
+ SendTo@
+'Start Menu'@
+ Templates@
+ Videos/
+ eclipse/
+ eclipse-workspace/
+ ntuser.dat.LOG1
+ ntuser.dat.LOG2
+ ntuser.ini
+ source/
+
+Admin@DESKTOP-QLU378L MINGW64 ~
+$ cd Quiz-2_repo/
+
+Admin@DESKTOP-QLU378L MINGW64 ~/Quiz-2_repo (main)
+$ touch 1.txt
+
+Admin@DESKTOP-QLU378L MINGW64 ~/Quiz-2_repo (main)
+$ git checkout -b feature1
+Switched to a new branch 'feature1'
+
+Admin@DESKTOP-QLU378L MINGW64 ~/Quiz-2_repo (feature1)
+$ touch 2.py
+
+Admin@DESKTOP-QLU378L MINGW64 ~/Quiz-2_repo (feature1)
+$ vi 1.txt
+
+Admin@DESKTOP-QLU378L MINGW64 ~/Quiz-2_repo (feature1)
+$ git checkout -b feature2
+Switched to a new branch 'feature2'
+
+Admin@DESKTOP-QLU378L MINGW64 ~/Quiz-2_repo (feature2)
+$ touch 3.txt
+
+Admin@DESKTOP-QLU378L MINGW64 ~/Quiz-2_repo (feature2)
+$ vi 2.py
+
+Admin@DESKTOP-QLU378L MINGW64 ~/Quiz-2_repo (feature2)
+$ vi 3.txt
+
+https://github.com/TEAM-KPH/Quiz-2_repo.git
+Admin@DESKTOP-QLU378L MINGW64 ~/Quiz-2_repo (feature2)
+$ git add --all
+warning: in the working copy of '1.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '2.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '3.txt', LF will be replaced by CRLF the next time Git touches it
+
+Admin@DESKTOP-QLU378L MINGW64 ~/Quiz-2_repo (feature2)
+$ git commit -m "nice"
+[feature2 9b0860a] nice
+ 3 files changed, 3 insertions(+)
+ create mode 100644 1.txt
+ create mode 100644 2.py
+ create mode 100644 3.txt
+
+Admin@DESKTOP-QLU378L MINGW64 ~/Quiz-2_repo (feature2)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Admin@DESKTOP-QLU378L MINGW64 ~/Quiz-2_repo (main)
+$ git merge feature1
+Already up to date.
+
+Admin@DESKTOP-QLU378L MINGW64 ~/Quiz-2_repo (main)
+$ git branch -d feature1
+Deleted branch feature1 (was 9f49451).
+
+Admin@DESKTOP-QLU378L MINGW64 ~/Quiz-2_repo (main)
+$ git push origin main
+Everything up-to-date
+
+Admin@DESKTOP-QLU378L MINGW64 ~/Quiz-2_repo (main)
+$ git checkout feature2
+Switched to branch 'feature2'
+
+Admin@DESKTOP-QLU378L MINGW64 ~/Quiz-2_repo (feature2)
+$ git push origin -u https://github.com/TEAM-KPH/Quiz-2_repo.git
+fatal: invalid refspec 'https://github.com/TEAM-KPH/Quiz-2_repo.git'
+
+Admin@DESKTOP-QLU378L MINGW64 ~/Quiz-2_repo (feature2)
+$ git push
+fatal: The current branch feature2 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin feature2
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+Admin@DESKTOP-QLU378L MINGW64 ~/Quiz-2_repo (feature2)
+$ git push --set-upstream origin feature2
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (5/5), 372 bytes | 372.00 KiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'feature2' on GitHub by visiting:
+remote:      https://github.com/TEAM-KPH/Quiz-2_repo/pull/new/feature2
+remote:
+To https://github.com/TEAM-KPH/Quiz-2_repo.git
+ * [new branch]      feature2 -> feature2
+branch 'feature2' set up to track 'origin/feature2'.
+
+Admin@DESKTOP-QLU378L MINGW64 ~/Quiz-2_repo (feature2)
+$
